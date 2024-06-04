@@ -1,6 +1,6 @@
 ```bash
 $ pwd
-/Users/huzhi/work/code/go_code/cobra/cobra-demo
+~/work/code/go_code/cobra/cobra-demo
 
 $ git init .
 提示：使用 'master' 作为初始分支的名称。这个默认分支名称可能会更改。要在新仓库中
@@ -12,7 +12,7 @@ $ git init .
 提示：可以通过以下命令重命名刚创建的分支：
 提示：
 提示：	git branch -m <name>
-已初始化空的 Git 仓库于 /Users/huzhi/work/code/go_code/cobra/cobra-demo/.git/
+已初始化空的 Git 仓库于 ~/work/code/go_code/cobra/cobra-demo/.git/
 
 $ tree -a .
 .
@@ -137,7 +137,7 @@ $
 # $ cobra-cli init -a hzhilamp@163.com -l MIT
 $ cobra-cli init
 Your Cobra application is ready at
-/Users/huzhi/work/code/go_code/cobra/cobra-demo
+~/work/code/go_code/cobra/cobra-demo
 $
 
 $ git status
@@ -203,7 +203,7 @@ $
 #####################################################################
 
 $ cobra-cli add version
-version created at /Users/huzhi/work/code/go_code/cobra/cobra-demo
+version created at ~/work/code/go_code/cobra/cobra-demo
 
 $ git status
 位于分支 master
@@ -278,7 +278,7 @@ $
 #####################################################################
 
 $ cobra-cli add subconmand1
-subconmand1 created at /Users/huzhi/work/code/go_code/cobra/cobra-demo
+subconmand1 created at ~/work/code/go_code/cobra/cobra-demo
 
 $ git status
 位于分支 master

@@ -47,5 +47,5 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// subconmand1Cmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	subconmand1Cmd.Flags().StringP("author", "a", "hzhilamp@163.com", "Help message for Author")
+	subconmand1Cmd.Flags().StringP("author", "a", "lanzhiwang@163.com", "Help message for Author")
 }
