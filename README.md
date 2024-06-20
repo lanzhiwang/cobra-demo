@@ -2,6 +2,41 @@
 $ pwd
 ~/work/code/go_code/cobra/cobra-demo
 
+$ docker pull docker-mirrors.alauda.cn/library/golang:1.22.4-bullseye
+
+$ docker run -ti --rm \
+-v ~/work/code/go_code/cobra/cobra-demo:/cobra-demo \
+-w /cobra-demo \
+docker-mirrors.alauda.cn/library/golang:1.22.4-bullseye \
+bash
+
+$ go mod init github.com/lanzhiwang/cobra-demo
+
+GO111MODULE='on' GOPROXY='https://goproxy.cn,direct' go install -v -work -x golang.org/x/tools/cmd/stringer@latest
+
+GO111MODULE='on' GOPROXY='https://goproxy.cn,direct' go get -v -work -x github.com/spf13/cobra@v1.8.0
+
+GO111MODULE='on' GOPROXY='https://goproxy.cn,direct' go build -o main -v -work -x -a main.go
+
+$ GO111MODULE='on' GOPROXY='https://goproxy.cn,direct' go mod graph
+
+github.com/lanzhiwang/cobra-demo github.com/inconshreveable/mousetrap@v1.1.0
+github.com/lanzhiwang/cobra-demo github.com/spf13/cobra@v1.8.0
+github.com/lanzhiwang/cobra-demo github.com/spf13/pflag@v1.0.5
+github.com/lanzhiwang/cobra-demo go@1.22.4
+
+github.com/spf13/cobra@v1.8.0 github.com/cpuguy83/go-md2man/v2@v2.0.3
+github.com/spf13/cobra@v1.8.0 github.com/inconshreveable/mousetrap@v1.1.0
+github.com/spf13/cobra@v1.8.0 github.com/spf13/pflag@v1.0.5
+github.com/spf13/cobra@v1.8.0 gopkg.in/yaml.v3@v3.0.1
+
+go@1.22.4 toolchain@go1.22.4
+
+github.com/cpuguy83/go-md2man/v2@v2.0.3 github.com/russross/blackfriday/v2@v2.1.0
+
+gopkg.in/yaml.v3@v3.0.1 gopkg.in/check.v1@v0.0.0-20161208181325-20d25e280405
+$
+
 $ git init .
 提示：使用 'master' 作为初始分支的名称。这个默认分支名称可能会更改。要在新仓库中
 提示：配置使用初始分支名，并消除这条警告，请执行：
